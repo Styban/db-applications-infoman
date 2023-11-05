@@ -1,0 +1,17 @@
+h1 {
+text-align: center;
+}
+
+#search-form > form {
+width: 60%;
+margin: auto;
+padding-bottom: 10px;
+
+display: flex;
+align-items: center;
+box-sizing: border-box;
+}
+
+#data-table{
+    border: 1ps solid black;
+}

@@ -33,7 +33,7 @@
         form > button {
             width: 100px;
             padding: 8px;
-         
+
         }
 
         table {
@@ -71,7 +71,7 @@
         tr:hover {
             background-color: #ddd;
         }
-        
+
     </style>
 </head>
 <body>
@@ -108,7 +108,7 @@
             const tableBody = document.querySelector('#data-table tbody');
 
             // Fetch JSON data from the remote URL
-            fetch('http://localhost/data')
+            fetch('http://localhost:7000/data')
                 .then(response => response.json())
                 .then(jsonData => {
                     // Populate the table with JSON data
@@ -144,7 +144,7 @@
                     console.error('Error fetching data:', error);
                 });
         }
-        
+
         // Function to search and filter the table
     function searchTable(event) {
         event.preventDefault();
@@ -157,7 +157,7 @@
         tableBody.innerHTML = '';
 
         // Fetch data from the '/search' endpoint with the search term
-        fetch(`http://localhost/search?q=${searchTerm}`)
+        fetch(`http://localhost:7000/search?q=${searchTerm}`)
             .then(response => response.json())
             .then(jsonData => {
                 // Populate the table with JSON data

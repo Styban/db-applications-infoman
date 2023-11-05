@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styleform.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="my-container container">
+            <h1>Student Form</h1>
+            <form method="post" class="row g-3 d-flex justify-content-center">
+                {{ form.hidden_tag() }}
+                <div class="row d-flex d-flex justify-content-between">
+                    <div class="col-md-4">
+                        {{ form.first_name.label(class="form-label")}}
+                        {{ form.first_name(class="form-control") }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form.middle_name.label(class="form-label") }}
+                        {{ form.middle_name(class="form-control") }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form.last_name.label(class="form-label") }}
+                        {{ form.last_name(class="form-control") }}
+                    </div>
+                </div>
+                <div class="row d-flex d-flex justify-content-between">
+                    <div class="col-md-3">
+                        {{ form.gender.label(class="form-label") }}
+                        {{ form.gender(class="form-control") }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form.dob.label(class="form-label") }}
+                        {{ form.dob(class="form-control") }}
+                    </div>
+                    <div class="col-md-3">
+                        {{ form.civil_status.label(class="form-label") }}
+                        {{ form.civil_status(class="form-control") }}
+                    </div>
+                </div>
+                <div class="row d-flex d-flex d-flex justify-content-between">
+                    <div class="col-md-5">
+                        {{ form.phone.label(class="form-label") }}
+                        {{ form.phone(class="form-control") }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.email.label(class="form-label") }}
+                        {{ form.email(class="form-control") }}
+                    </div>
+                </div>
+                <br>
+                {{ form.submit(class="btn btn-primary btn-lg") }}
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+.my-container{
+    width: 60%;
+}
+
+.justify-content-center{
+    row-gap: 30px;
+}
+
+h1{
+    margin: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn{
+    width: 50%;
+}

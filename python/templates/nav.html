@@ -1,0 +1,31 @@
+<nav
+  class="navbar navbar-expand-lg justify-content-between"
+  style="background-color: #fbfbfd"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">College DB</a>
+
+    <ul class="nav justify-content-center nav-underline" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+      <li class="nav-item">
+        <a
+          class="nav-link {% if active == 'view' %}active{%endif%}"
+          data-toggle="tab"
+          aria-current="page"
+          href="/"
+          >View</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link {% if active == 'add' %}active{%endif%}"
+          data-toggle="tab"
+          href="{{url_for('add_student')}}"
+          >Add</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
