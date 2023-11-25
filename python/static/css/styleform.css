@@ -12,6 +12,14 @@ h1{
     font-weight: bold;
 }
 
-.btn{
+.btn-submit{
     width: 50%;
+}
+
+.mybtn{
+    width: 20%;
+}
+
+.mydiv{
+    margin-top: 20px;
 }

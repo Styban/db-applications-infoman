@@ -14,10 +14,10 @@
   ></button>
 </div>
 {% endfor %}
-<h1>{{ title }}</h1>
+<h1>Table View</h1>
 <div class="container">
   <div id="search-form">
-    <form class="d-flex" action="{{ url_for('search') }}" method="POST">
+    <form class="d-flex" action="{{ url_for('searchcourse')}}" method="POST">
       {{ form.hidden_tag() }}
       <input
         class="form-control me-2"
@@ -28,8 +28,8 @@
       />
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
-    {% include 'add_view_student.html'%}
+    {% include 'add_view_course.html'%}
   </div>
-  {% include 'table.html'%}
+  {% include 'coursetable.html'%}
 </div>
 {% endblock %}

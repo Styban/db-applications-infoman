@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="my-container container">
+    <form method="post" class="row justify-content-evenly">
+      {{ form.hidden_tag() }}
+      <div class="col">
+        {{ form.course_name.label(class="form-label")}} {{
+        form.course_name(class="form-control") }}
+      </div>
+      <div class="col">
+        {{ form.department.label(class="form-label") }} {{
+        form.department(class="form-control") }}
+      </div>
+      <br />
+      <div class="row justify-content-center mydiv">
+        {{ form.submit(class="btn btn-primary btn-lg mybtn") }}
+      </div>
+    </form>
+  </div>
+</div>

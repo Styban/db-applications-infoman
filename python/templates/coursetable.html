@@ -1,0 +1,33 @@
+<table class="table table-light table-hover mytable" id="data-table">
+  <thead>
+    <tr class="table-info">
+      <th>No</th>
+      <th>Course</th>
+      <th>Deparment</th>
+      <th>Date Created</th>
+      <th style="text-align: center; width: 150px">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in courses %}
+    <tr>
+      <td>{{course.course_id}}</td>
+      <td>{{course.course_name}}</td>
+      <td>{{course.department}}</td>
+      <td>{{course.date_created}}</td>
+      <td class="d-flex justify-content-around actioncourse">
+        <a
+          class="btn btn-danger btn-sm mr-2"
+          href="{{ url_for('deletecourse', id=course.course_id) }}"
+          >Delete</a
+        >
+        <a
+          class="btn btn-warning btn-sm"
+          href="{{ url_for('courseupdate', id=course.course_id) }}"
+          >Update</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

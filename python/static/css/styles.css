@@ -1,5 +1,7 @@
-h1 {
-text-align: center;
+h1{
+    margin: 50px;
+    text-align: center;
+    font-weight: bold;
 }
 
 #search-form > form {
@@ -14,4 +16,8 @@ box-sizing: border-box;
 
 #data-table{
     border: 1ps solid black;
+}
+
+.table-div{
+    width: 100%;
 }

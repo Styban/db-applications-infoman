@@ -5,26 +5,31 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">College DB</a>
 
-    <ul class="nav justify-content-center nav-underline" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+    <ul
+      class="nav justify-content-center nav-underline"
+      style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      "
+    >
       <li class="nav-item">
         <a
-          class="nav-link {% if active == 'view' %}active{%endif%}"
+          class="nav-link {% if navactive == 'student' %}active{%endif%}"
           data-toggle="tab"
           aria-current="page"
           href="/"
-          >View</a
+          >Student</a
         >
       </li>
       <li class="nav-item">
         <a
-          class="nav-link {% if active == 'add' %}active{%endif%}"
+          class="nav-link {% if navactive == 'course' %}active{%endif%}"
           data-toggle="tab"
-          href="{{url_for('add_student')}}"
-          >Add</a
+          href="{{url_for('courseindex')}}"
+          >Course</a
         >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#">Link</a>
       </li>
     </ul>
   </div>
